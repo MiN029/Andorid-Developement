@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.easyfoodmvvm.FavoritesFragment"
+        android:name="com.example.easyfoodmvvm.fragments.FavoritesFragment"
         android:label="Favorite"
         tools:layout="@layout/fragment_favorites" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/catagoryFragment"
-        android:name="com.example.easyfoodmvvm.CatagoryFragment"
+        android:name="com.example.easyfoodmvvm.fragments.CatagoryFragment"
         android:label="Catagory"
         tools:layout="@layout/fragment_catagory" >
         <action

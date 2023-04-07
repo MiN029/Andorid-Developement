@@ -1,9 +1,10 @@
-package com.example.easyfoodmvvm
+package com.example.easyfoodmvvm.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.Navigation
 import androidx.navigation.ui.NavigationUI
+import com.example.easyfoodmvvm.R
 import com.example.easyfoodmvvm.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -17,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(view)
 
         val buttomNav = binding.buttomNav
-        val navController = Navigation.findNavController(this,R.id.host_fragment)
+        val navController = Navigation.findNavController(this, R.id.host_fragment)
 
         NavigationUI.setupWithNavController(buttomNav,navController)
     }
