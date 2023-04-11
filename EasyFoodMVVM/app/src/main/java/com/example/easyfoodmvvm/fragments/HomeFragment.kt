@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
+import com.example.easyfoodmvvm.activity.MealActivity
 import com.example.easyfoodmvvm.databinding.FragmentHomeBinding
 import com.example.easyfoodmvvm.pojo.Meal
 import com.example.easyfoodmvvm.viewModel.HomeViewModel
@@ -36,12 +37,13 @@ class HomeFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         mHomeViewModel.getRandomMeal()
         observeRandomMealLiveData()
-        onRandomMealClikc()
+        onRandomMealClick()
     }
 
-    private fun onRandomMealClikc() {
+    private fun onRandomMealClick() {
         binding.imgRadomMeal.setOnClickListener {
-            val intent : ()
+            val intent = Intent(activity , MealActivity::class.java)
+            startActivity(intent)
         }
     }
 

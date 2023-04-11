@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -20,7 +20,6 @@
             android:layout_height="match_parent"
             app:contentScrim="@color/accent"
             app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
-            app:title="Meal Name"
             >
 
             <ImageView
@@ -42,4 +41,96 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnFav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/accent"
+        android:src="@drawable/icon_favorite"
+        android:tint="@color/white"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom|end"
+        android:layout_marginEnd="@dimen/_5sdp"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Catagories : Beef"
+                    android:textStyle="bold"
+                    android:textColor="@color/g_black"
+                    android:drawableLeft="@drawable/icon_category"
+                    android:drawableTint="@color/g_black"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Locations : China"
+                    android:textStyle="bold"
+                    android:textColor="@color/g_black"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:drawableTint="@color/g_black"
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+                android:text="- Instructions"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/myfont"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtInstruction"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/black"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:id="@+id/img_Youtube"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_gravity="bottom|center"
+        android:src="@drawable/"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
