@@ -33,7 +33,7 @@ class HomeViewModel : ViewModel() {
         })
     }
 
-    public fun observeRandomMealLiveData() : LiveData<Meal>{
+    fun observeRandomMealLiveData() : LiveData<Meal>{
         return randomMealLiveData
     }
 

@@ -12,7 +12,9 @@
         android:layout_height="@dimen/_230sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="@color/black"
+        >
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:id="@+id/collapsing_Toolbar"
@@ -75,6 +77,7 @@
                 >
 
                 <TextView
+                    android:id="@+id/txtCatagories"
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -86,6 +89,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/txtLocations"
                     android:layout_width="wrap_content"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -104,7 +108,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linear_layout"
-                android:text="- Instructions"
+                android:text="- Instructions : "
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:layout_marginStart="@dimen/_10sdp"
@@ -113,6 +117,7 @@
                 android:fontFamily="@font/myfont"
                 />
             <TextView
+                android:id="@+id/txt_instruction_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
@@ -130,7 +135,17 @@
         android:layout_width="@dimen/_40sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_gravity="bottom|center"
-        android:src="@drawable/"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:src="@drawable/icon_youtube"
+        />
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        app:layout_anchor="@id/appbar"
+        app:layout_anchorGravity="bottom"
+        android:visibility="gone"
         />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
